@@ -9,9 +9,17 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
         <script src="js/bootstrap.min.js"></script>
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <title>Hello World</title>
+        <title>postoapp</title>
 </head>
 <body>
+
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
 
 <!-- Cria o botão de criar mapa -->
 <button type="button" onclick="init()" class="btn btn-block btn-large">Mapa</button>
@@ -66,7 +74,11 @@
         infowindow.open(map,marker);
     }
 
-
 </script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
 </body>
 </html>
