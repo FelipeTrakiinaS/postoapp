@@ -15,10 +15,24 @@
 
 
 <!-- Cria o botão de criar mapa -->
-
-
 <div id="menu">  
     <button type="button" onclick="init()" class="btn btn-mapa" width="100%">Mapa</button>
+</div>
+
+<div id="menu">  
+    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
+</div>
+
+<div id="menu">  
+    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
+</div>
+
+<div id="menu">  
+    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
+</div>
+
+<div id="menu">  
+    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
 </div>
 
 <!-- Define o tamanho do mapa -->
@@ -31,7 +45,7 @@
     
     // Define a altura do mapa para se enquadrar com o tamanho da tela
     var altura = $(window).height();
-    $('#map').css('height',altura-40);
+    $('#map').css('height',altura-80);
 
     var map;
     var marker;
@@ -62,7 +76,7 @@
     }
 
     function showInfo() {
-        map.setZoom(16);
+        // map.setZoom(16);
         map.setCenter(marker.getPosition());
         var infowindow = new google.maps.InfoWindow({
             content: "Rua Sorocaba"

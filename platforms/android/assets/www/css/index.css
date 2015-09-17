@@ -117,7 +117,7 @@ h1 {
 
 .btn {
     font-family: arial;
-    font-size: 20px;
+    font-size: 50px;
     font-weight: 700;
     border: none;
     padding: 10px;
@@ -128,7 +128,7 @@ h1 {
 .btn-mapa {
     background: #C0C0C0;
     color: #fff;
-    box-shadow:0 5px 0 #999999;
+ /*   box-shadow:0 5px 0 #999999;*/
 }
 
 .btn-mapa:hover {
@@ -139,9 +139,9 @@ h1 {
     transiton:all .9s ease;
 }
 
-.btn-mapa:active {
+/*.btn-mapa:active {
     position: relative;
     top: 5px;
     box-shadow: none;
-
+*/
 }
