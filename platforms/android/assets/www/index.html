@@ -6,7 +6,7 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <script src="js/bootstrap.min.js"></script>
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <title>postoapp</title>
@@ -15,8 +15,11 @@
 
 
 <!-- Cria o botão de criar mapa -->
-<button type="button" onclick="init()" class="btn btn-block btn-large">Mapa</button>
 
+
+<div id="menu">  
+    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">Mapa</button>
+</div>
 
 <!-- Define o tamanho do mapa -->
 <div id="map" style="width: 100%;"></div> 
@@ -37,7 +40,7 @@
         // Define o link do icone que será utilizado no mapa
         var image = new google.maps.MarkerImage(
             'img/personagem.png',
-            new google.maps.Size(50,50)
+            new google.maps.Size(50,50) 
             );
 
         var mapOptions = {

@@ -113,3 +113,35 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+
+.btn {
+    font-family: arial;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-mapa {
+    background: #C0C0C0;
+    color: #fff;
+    box-shadow:0 5px 0 #999999;
+}
+
+.btn-mapa:hover {
+    background: #33CCFF;
+    -webkit-transition:all .9s ease;
+    -moz-transition:all .9s ease;
+    -ms-transition:all .9s ease;
+    transiton:all .9s ease;
+}
+
+.btn-mapa:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+
+}
