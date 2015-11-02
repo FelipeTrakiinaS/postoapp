@@ -375,7 +375,7 @@ body {
 
 /*BOTAO PESQUISAR - (TELA PESQUISAR)*/
 #pesquisafsm-caixa {
-background: #eee; padding:10px; border:0 none; width:157px;
+background: #eee; padding:10px; border:0 none; width:157px; color: #464646;
 }
 #pesquisafsm-botao {
 border: 1px solid #222;
@@ -384,7 +384,7 @@ background:  no-repeat left #464646;
 margin-left: -3px;
 color:#fff;
 font: 'trebuchet ms', trebuchet;
-padding:9px 10px 11px 5px;
+padding:10px 10px 10px 5px;
 border:0 none;
 font-weight:bold;
 border-top-right-radius: 7px;
