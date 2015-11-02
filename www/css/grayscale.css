@@ -375,16 +375,16 @@ body {
 
 /*BOTAO PESQUISAR - (TELA PESQUISAR)*/
 #pesquisafsm-caixa {
-background: #eee; padding:10px; border:0 none; width:170px;
+background: #eee; padding:10px; border:0 none; width:157px;
 }
 #pesquisafsm-botao {
 border: 1px solid #222;
 color: #eee; 
-background: url(http://i.imgur.com/cz4sguf.png) no-repeat left #464646;
+background:  no-repeat left #464646;
 margin-left: -3px;
 color:#fff;
 font: 'trebuchet ms', trebuchet;
-padding:4px 10px 16px 22px;
+padding:9px 10px 11px 5px;
 border:0 none;
 font-weight:bold;
 border-top-right-radius: 7px;
@@ -392,5 +392,5 @@ border-bottom-right-radius: 7px;
 }
 #pesquisafsm-botao:hover {
 cursor: pointer;
-background:  url(http://i.imgur.com/cz4sguf.png) no-repeat left #033549;
+background:   no-repeat left #033549;
 }
