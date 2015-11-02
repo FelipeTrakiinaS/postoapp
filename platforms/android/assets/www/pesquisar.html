@@ -58,10 +58,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Entrar</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contato</a>
+                        <a class="page-scroll" href="#pesquisar">Pesquisar</a>
                     </li>
                 </ul>
             </div>
@@ -70,11 +67,14 @@
         <!-- /.container -->
     </nav>
 
-    <section id="about" class="container content-section text-center">
+    <section id="pesquisar" class="container content-section text-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    
+                    <form action="/search" id="searchthis" method="get" style="display: inline;">
+                        <input id="pesquisafsm-caixa" name="q" placeholder="Encontre seu posto!" size="40" type="text" /> 
+                        <input id="pesquisafsm-botao" type="submit" value="" /> 
+                    </form>
                 </div>
             </div>
         </div>
