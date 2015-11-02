@@ -37,8 +37,25 @@
 <body>
 
 <!-- Cria o botão de criar mapa -->
-<!-- <button type="button" class="btn btn-block btn-large" onclick="init()">Mostrar Mapa</button>
-<input type="button" class="btn btn-block btn-large" onclick="init()" value="Mostar Mapa"> --> 
+<div id="menu">  
+    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">Mapa</button>
+</div>
+
+<div id="menu">  
+    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
+</div>
+
+<div id="menu">  
+    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
+</div>
+
+<div id="menu">  
+    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
+</div>
+
+<div id="menu">  
+    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
+</div>
 
 <!-- Define o tamanho do mapa -->
 <div id="map" style="width: 100%;"></div> 
@@ -50,16 +67,16 @@
     
     // Define a altura do mapa para se enquadrar com o tamanho da tela
     var altura = $(window).height();
-    $('#map').css('height',altura-0);
+    $('#map').css('height',altura-80);
 
     var map;
     var marker;
 
-    // function init() {
+    function init() {
         // Define o link do icone que será utilizado no mapa
         var image = new google.maps.MarkerImage(
-            'http://www.thinkupthemes.com/wp-content/themes/alante/images/icons/color/Person-black.png',
-            new google.maps.Size(50,50)
+            'img/personagem.png',
+            new google.maps.Size(50,50) 
             );
 
         var mapOptions = {
@@ -78,17 +95,16 @@
             icon: image //Insere o icone no mapa
         });
         google.maps.event.addListener(marker,"click",showInfo);
-    // }
+    }
 
     function showInfo() {
-        map.setZoom(16);
+        // map.setZoom(16);
         map.setCenter(marker.getPosition());
         var infowindow = new google.maps.InfoWindow({
             content: "Rua Sorocaba"
         });
         infowindow.open(map,marker);
     }
-
 
 </script>
 </body>
