@@ -1,61 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Posto APP</title>
-
-    <!-- Conexão bootstrap com CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS -->
-<!--     <link href="css/grayscale.css" rel="stylesheet">
- -->
-    <!-- Fontes -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
+    <title>Mapa</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 <body>
 
 <!-- Cria o botão de criar mapa -->
-<div id="menu">  
-    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">Mapa</button>
-</div>
-
-<div id="menu">  
-    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
-</div>
-
-<div id="menu">  
-    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
-</div>
-
-<div id="menu">  
-    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
-</div>
-
-<div id="menu">  
-    <button type="button" onclick="init()" class="btn btn-mapa" width="100%">...</button>
-</div>
+<button type="button" class="btn btn-block btn-large" onclick="init()">Mostrar Mapa</button>
+<input type="button" class="btn btn-block btn-large" onclick="init()" value="Mostar Mapa"> 
 
 <!-- Define o tamanho do mapa -->
 <div id="map" style="width: 100%;"></div> 
@@ -67,7 +20,7 @@
     
     // Define a altura do mapa para se enquadrar com o tamanho da tela
     var altura = $(window).height();
-    $('#map').css('height',altura-80);
+    $('#map').css('height',altura-40);
 
     var map;
     var marker;
@@ -75,8 +28,8 @@
     function init() {
         // Define o link do icone que será utilizado no mapa
         var image = new google.maps.MarkerImage(
-            'img/personagem.png',
-            new google.maps.Size(50,50) 
+            'http://www.thinkupthemes.com/wp-content/themes/alante/images/icons/color/Person-black.png',
+            new google.maps.Size(50,50)
             );
 
         var mapOptions = {
@@ -98,13 +51,14 @@
     }
 
     function showInfo() {
-        // map.setZoom(16);
+        map.setZoom(16);
         map.setCenter(marker.getPosition());
         var infowindow = new google.maps.InfoWindow({
             content: "Rua Sorocaba"
         });
         infowindow.open(map,marker);
     }
+
 
 </script>
 </body>
