@@ -12,10 +12,10 @@
     <title>Posto APP</title>
 
     <!-- Conexão bootstrap com CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
+    <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
 
     <!-- Fontes -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -33,63 +33,22 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+
+    <!-- Chama a api online do google maps -->
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
+
 </head>
-<body>
-
-<!-- Cria o botão de criar mapa -->
-<!-- <button type="button" class="btn btn-block btn-large" onclick="init()">Mostrar Mapa</button>
-<input type="button" class="btn btn-block btn-large" onclick="init()" value="Mostar Mapa"> --> 
-
-<!-- Define o tamanho do mapa -->
-<div id="map" style="width: 100%;"></div> 
-
-<!-- Chama a api online do google maps -->
-<script src="js/apimaps.js"></script><!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
-
-<script type="text/javascript">
-    
-    // Define a altura do mapa para se enquadrar com o tamanho da tela
-    var altura = $(window).height();
-    $('#map').css('height',altura-0);
-
-    var map;
-    var marker;
-
-    // function init() {
-        // Define o link do icone que será utilizado no mapa
-        var image = new google.maps.MarkerImage(
-            "img/personagem.png", //'http://www.thinkupthemes.com/wp-content/themes/alante/images/icons/color/Person-black.png'
-            new google.maps.Size(50,50)
-            );
-
-        var mapOptions = {
-            center: new google.maps.LatLng(-26.8097025,-49.2821839), //Define o local no mapa quando abrir
-            zoom: 15,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        } 
-        map = new google.maps.Map(document.getElementById("map"),mapOptions);
-
-        // Cria no mapa o icone de localização
-        var sorocaba = new google.maps.LatLng(-26.8097025,-49.2821839);
-        marker = new google.maps.Marker({
-            position: sorocaba,
-            title: "Casa do Felipe", // Ao passar o mouse no icone mostra uma descrição
-            map: map,
-            icon: image //Insere o icone no mapa
-        });
-        google.maps.event.addListener(marker,"click",showInfo);
-    // }
-
-    function showInfo() {
-        map.setZoom(16);
-        map.setCenter(marker.getPosition());
-        var infowindow = new google.maps.InfoWindow({
-            content: "Rua Sorocaba"
-        });
-        infowindow.open(map,marker);
-    }
-
-
-</script>
+    <!-- Mapa -->
+    <section class="map">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+        <br />
+<!--         <small>
+            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+        </small> -->
+        </iframe>
+    </section>
 </body>
 </html>
+

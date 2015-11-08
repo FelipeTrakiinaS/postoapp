@@ -394,3 +394,13 @@ border-bottom-right-radius: 7px;
 cursor: pointer;
 background:   no-repeat left #FF6200;
 }
+
+.map {
+    height: 500px;
+}
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
