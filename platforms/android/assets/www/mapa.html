@@ -15,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- CSS -->
-    <!-- <link href="css/grayscale.css" rel="stylesheet"> -->
+    <link href="css/grayscale.css" rel="stylesheet">
 
     <!-- Fontes -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -83,11 +83,10 @@
     function showInfo() {
         map.setZoom(16);
         map.setCenter(marker.getPosition());
-        var ref = infowindow;
-            infowindow = new google.maps.InfoWindow({
+        var infowindow = new google.maps.InfoWindow({
             content: "Rua Sorocaba"
         });
-        var ref = infowindow.open(map,marker);
+        infowindow.open(map,marker);
     }
 
 
