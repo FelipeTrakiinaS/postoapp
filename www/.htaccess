@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Página de cadastro
+  RewriteRule ^novo/?$ cadastro.php [NC,L]
+
+  #página com envio de parametro via $_GET
+  RewriteRule ^ver/[0-9]+?$ index.php?id=1 [NC]
+
+
+  #controle de cache
+  <FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+	Header set Cache-Control "max-age=28800"
+  </FilesMatch>
+
+
+</IfModule>
