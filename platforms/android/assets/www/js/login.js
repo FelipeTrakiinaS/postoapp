@@ -42,7 +42,9 @@ function logar () {
 
 			var ver =  JSON.parse(data);
 
-			if (ver === 'ok') {
+
+
+			if (ver['res'] === 'ok') {
 
 				alert('logado');
 
