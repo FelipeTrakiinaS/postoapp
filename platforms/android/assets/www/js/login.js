@@ -50,7 +50,8 @@ function logar () {
 
 				//salvar no cache
 				//direciona para pagina
-				window.location.replace("C:/Users/Acer%20Aspire%20V5/Documents/GitHub/postoapp/www/index.html");
+				// window.location.replace("C:/Users/Acer%20Aspire%20V5/Documents/GitHub/postoapp/www/index.html");
+				window.location.replace("http://localhost/postoapp/cadastrar.php");
 
 			}else{
 				console.log('login ou senha errado');

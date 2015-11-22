@@ -38,7 +38,7 @@
 
 </head>
 
-<!-- Topo da página e "scroll" até o topo -->
+
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navegação -->
@@ -60,7 +60,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#parceiros">Parceiros</a>
+                        <a class="page-scroll" href="#about">Ranking</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="menu.html">Voltar</a>
@@ -70,48 +70,65 @@
         </div>
     </nav>
 
-    <!-- Serviços (Imagens) -->
-    <section id="parceiros" class="container content-section text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Parceiros</h2>
-                    <hr class="small">
-                    <div class="row">
 
-                        <!-- Imagem Posto Petrobras -->
-                        <div class="col-md-6">
-                                <a href="http://www.br.com.br/wps/portal/portalconteudo/home">
-                                    <img class="img-portfolio img-responsive" src="img/postosParceiros/petrobras.jpg"><br /> 
-                                </a>
-                        </div>
+<br /><br /><br /><br /><br />
+<div class="container">
 
-                        <!-- Imagem Posto Ipiranga -->
-                        <div class="col-md-6">
-                                <a href="http://www.ipiranga.com.br/wps/portal/ipiranga/inicio">
-                                    <img class="img-portfolio img-responsive" src="img/postosParceiros/ipiranga.jpg"> <br />
-                                </a>
-                        </div>
+    <div class="tab-pane" id="registro">
+        <form id="cadastrar" class="form-signin" >
 
-                        <!-- Imagem Posto Shell -->
-                        <div class="col-md-6">
-                                <a href="http://www.shell.com.br/">
-                                    <img class="img-portfolio img-responsive" src="img/postosParceiros/shell.jpg"> <br />
-                                </a>
-                        </div>
+            <input id="NomePosto" type="text" class="form-control" placeholder="Nome do Posto" required autofocus>
+            <input id="Latitude" type="text" class="form-control" placeholder="Latitude" required>
+            <input id="Longitude" type="text" class="form-control" placeholder="Longitude" required>
+            <input id="Valor" type="text" class="form-control" placeholder="Valor" required>
+            <div id="combos">
 
-                        <!-- Imagem Posto ALE -->
-                        <div class="col-md-6">
-                                <a href="https://www2.ale.com.br/">
-                                    <img class="img-portfolio img-responsive" src="img/postosParceiros/ale.jpg"> 
-                                </a>
-                        </div>
-                    </div>
-                    <hr class="small">
-                </div>
             </div>
-        </div>
-    </section>
+
+
+
+              
+            <br />
+            <input type="button" onclick="cadastro()" class="btn btn-lg btn-default btn-block" value="Criar" />
+
+            </div>
+    </div>
+
+<script type="text/javascript">
+    $.getJSON("http://localhost/postoapp/cadastrar.php?acao=cidades", function( data ) {
+
+        var items = [];
+          $.each( data.cidades, function( key, val ) {
+            items.push( "<option value='" + key + "'>" + val + "</option>" );
+          });
+
+
+          $( "<select/>", {
+            id:"Cidade",
+            class: "form-control",
+
+            html: items.join( "" )
+          }).appendTo( $("#combos") );
+
+
+
+           var item = [];
+          $.each( data.combusti, function( key, val ) {
+            item.push( "<option value='" + key + "'>" + val + "</option>" );
+          });
+
+
+          $( "<select/>", {
+            id:"Combustivel",
+            class: "form-control",
+
+            html: item.join( "" )
+          }).appendTo( $("#combos") );
+
+
+        });
+
+    </script>
 
 </body>
 </html>
