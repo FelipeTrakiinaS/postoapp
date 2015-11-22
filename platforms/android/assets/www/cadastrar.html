@@ -85,9 +85,6 @@
 
             </div>
 
-
-
-              
             <br />
             <input type="button" onclick="cadastro()" class="btn btn-lg btn-default btn-block" value="Criar" />
 
@@ -95,7 +92,7 @@
     </div>
 
 <script type="text/javascript">
-    $.getJSON("http://localhost/postoapp/cadastrar.php?acao=cidades", function( data ) {
+    $.getJSON("http://app.alexjonas.com.br/postoapp/cadastrar.php?acao=cidades", function( data ) {
 
         var items = [];
           $.each( data.cidades, function( key, val ) {
