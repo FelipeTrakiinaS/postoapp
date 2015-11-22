@@ -1,6 +1,6 @@
 function cadastro() {
 
-	var postTo = 'http://localhost/postoapp/login.php';
+	var postTo = 'http://app.alexjonas.com.br/postoapp/login.php';
 
     var nome = $('#cadastrarNome').val() ;
     var senha = $('#cadastrarSenha').val();
@@ -22,7 +22,7 @@ function cadastro() {
 
 function logar () {
 	
-	var postTo = 'http://localhost/postoapp/login.php';
+	var postTo = 'http://app.alexjonas.com.br/postoapp/login.php';
 
     var nome = $('#logarNome').val() ;
     var senha = $('#logarSenha').val();
@@ -51,7 +51,7 @@ function logar () {
 				//salvar no cache
 				//direciona para pagina
 				// window.location.replace("C:/Users/Acer%20Aspire%20V5/Documents/GitHub/postoapp/www/index.html");
-				window.location.replace("http://localhost/postoapp/cadastrar.php");
+				window.location.replace("http://app.alexjonas.com.br/postoapp/cadastrar.php");
 
 			}else{
 				console.log('login ou senha errado');
