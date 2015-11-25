@@ -2,15 +2,21 @@ function cadastro() {
 
 	var postTo = 'http://app.alexjonas.com.br/postoapp/cadastrar.php';
 
-    var nomePosto = $('#cadastrarNomePosto').val() ;
-    var Latitude = $('#cadastrarLatitude').val();
-    var Longitude = $('#cadastrarLongitude').val();
-    var Valor = $('#cadastrarValor').val();
-    var Cidade = $('#cadastrarCidade').val();
-    var Combustivel = $('#cadastrarCombustivel').val();
+    var nomePosto = $('#NomePosto').val() ;
+    var Latitude = $('#Latitude').val();
+    var Longitude = $('#Longitude').val();
+    var Valor = $('#Valor').val();
+    var Cidade = $('#Cidade').val();
+    var Combustivel = $('#Combustivel').val();
+    var idUsuario = window.localStorage.getItem('id_usuario');
 
 
     console.log(nomePosto);
+    console.log(Latitude);
+    console.log(Longitude);
+    console.log(Valor);
+    console.log(Cidade);
+    console.log(Combustivel);
 
 
 
@@ -20,64 +26,30 @@ function cadastro() {
 		             Longitude : Longitude,
 		             Valor : Valor,
 		             Cidade : Cidade,
-		             Combustivel : Combustivel
+		             Combustivel : Combustivel,
+		             idUsuario : idUsuario
 
 		            }), function( data ) {
+		console.log(data);
+
+				$('#limpar').click();
+
+
+
 
 	});
 
+
 }
 
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
 
-function Cadastrar () {
-	
-	var postTo = 'http://app.alexjonas.com.br/postoapp/cadastrar.php';
-
-    var nomePosto = $('#cadastroNomePosto').val() ;
-    var Latitude = $('#cadastroLatitude').val();
-    var Longitude = $('#cadastroLongitude').val();
-    var Valor = $('#cadastroValor').val();
-    var Combustivel = $('#cadastroCombustivel').val();
-
-
-    console.log(nomePosto);
-
-
-
-	$.post( postTo,({ acao : 'cadastro',
-		             nomePosto : nomePosto, 
-		             Latitude : Latitude,
-		             Longitude : Longitude,
-		             Valor : Valor,
-		             Cidade : Cidade,
-		             Combustivel : Combustivel
-
-		            }), 
-		function( data ) {
-
-			alert(data);
-
-			var ver =  JSON.parse(data);
-
-
-
-			if (ver['res'] === 'ok') {
-
-				alert('Cadastrado');
-
-				//salvar no cache
-				//direciona para pagina
-				// window.location.replace("C:/Users/Acer%20Aspire%20V5/Documents/GitHub/postoapp/www/index.html");
-				window.location.replace("http://app.alexjonas.com.br/postoapp/cadastrar.php");
-
-			}else{
-				console.log('Falha ao cadastrar');
-			}
-
-
-
-		}
-	);
-
-
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
 }
