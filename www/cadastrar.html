@@ -35,6 +35,7 @@
 
     <!-- Tema customizado de JavaScript -->
     <script src="js/grayscale.js"></script>
+    <script src="js/cadastrar.js"></script>
 
 </head>
 
@@ -85,14 +86,17 @@
 
             </div>
 
-            <br />
-            <input type="button" onclick="cadastro()" class="btn btn-lg btn-default btn-block" value="Criar" />
+            
+            <button id="limpar" type="reset" class="btn btn-lg btn-default form-control">Limpar</button>
+            <input type="button" onclick="cadastro()" class="btn btn-lg btn-default btn-block" value="Cadastrar" />
 
             </div>
+
     </div>
 
 <script type="text/javascript">
-    $.getJSON("http://app.alexjonas.com.br/postoapp/cadastrar.php?acao=cidades", function( data ) {
+
+    $.getJSON("http://localhost/postoapp/cadastrar.php?acao=cidades", function( data ) {
 
         var items = [];
           $.each( data.cidades, function( key, val ) {
