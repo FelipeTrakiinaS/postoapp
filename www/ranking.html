@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="scotchApp">
 <head>
 
     <!-- Ícone do site -->
@@ -35,6 +35,19 @@
 
     <!-- Tema customizado de JavaScript -->
     <script src="js/grayscale.js"></script>
+    <script src="js/angular.js"></script>
+
+    <script type="text/javascript">
+
+        var scotchApp = angular.module('scotchApp', []);
+
+            scotchApp.controller('countryCtrl', ['$scope', '$http', function ($scope, $http){
+                $http.get('http://app.alexjonas.com.br/postoapp/listar.php').success(function(data) {
+                  $scope.valores = data;
+                });
+            }]);
+
+    </script>
 
 </head>
 
@@ -69,6 +82,8 @@
             </div>
         </div>
     </nav>
+   
+
 
 
 
