@@ -42,7 +42,7 @@
         var scotchApp = angular.module('scotchApp', []);
 
             scotchApp.controller('countryCtrl', ['$scope', '$http', function ($scope, $http){
-                $http.get('http://app.alexjonas.com.br/postoapp/listar.php').success(function(data) {
+                $http.get('http://app.alexjonas.com.br/postoapp/rank.php').success(function(data) {
                   $scope.valores = data;
                 });
             }]);
@@ -52,7 +52,7 @@
 </head>
 
 <!-- Topo da página e "scroll" até o topo -->
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="countryCtrl">
 
     <!-- Navegação -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">

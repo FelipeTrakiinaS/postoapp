@@ -92,7 +92,7 @@
     // function init() {
         // Define o link do icone que será utilizado no mapa
         var image = new google.maps.MarkerImage(
-            'http://www.thinkupthemes.com/wp-content/themes/alante/images/icons/color/Person-black.png',
+            'img/posto.png',
             new google.maps.Size(50,50)
             );
 
@@ -103,25 +103,54 @@
         } 
         map = new google.maps.Map(document.getElementById("map"),mapOptions);
 
+
+
+
         // Cria no mapa o icone de localização
-        var sorocaba = new google.maps.LatLng(-26.8097025,-49.2821839);
+        var sorocaba = new google.maps.LatLng();
         marker = new google.maps.Marker({
             position: sorocaba,
             title: "Casa do Felipe", // Ao passar o mouse no icone mostra uma descrição
             map: map,
             icon: image //Insere o icone no mapa
         });
-        google.maps.event.addListener(marker,"click",showInfo);
+        google.maps.event.addListener(marker,"click");
+
+
+        $.getJSON("http://app.alexjonas.com.br/postoapp/mapa.php", function( data ) {
+
+            $.each( data, function( key, val ) {
+
+                console.log(val.nome_posto);
+                 
+                var sorocaba = new google.maps.LatLng(val.lat_posto,val.lon_posto);
+                marker = new google.maps.Marker({
+                    position: sorocaba,
+                    title: val.nome_posto , // Ao passar o mouse no icone mostra uma descrição
+                    map: map,
+                    icon: image //Insere o icone no mapa
+                });
+                google.maps.event.addListener(marker,"click");  
+
+
+            });          
+
+        });
+
+
+
+
+
     // }
 
-    function showInfo() {
-        map.setZoom(16);
-        map.setCenter(marker.getPosition());
-        var infowindow = new google.maps.InfoWindow({
-            content: "Rua Sorocaba"
-        });
-        infowindow.open(map,marker);
-    }
+    // function showInfo() {
+    //     map.setZoom(16);
+    //     map.setCenter(marker.getPosition());
+    //     var infowindow = new google.maps.InfoWindow({
+    //         content: "Rua Sorocaba"
+    //     });
+    //     infowindow.open(map,marker);
+    // }
 
 
 </script>
