@@ -62,15 +62,51 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2><p class="lead"><a target="_blank"><a href="pesquisar.html">Postos</a></p></a><h2>
-                    <!-- <h2><p class="lead"><a target="_blank"><a href="mapa.html">Mapa</a></p></a><h2> -->
-                    <h2><p class="lead"><a target="_blank"><a href="mapa2.html">Mapa</a></p></a><h2>
-                    <h2><p class="lead"><a target="_blank"><a href="ranking.html">Ranking</a></p></a><h2>
-                    <h2><p class="lead"><a target="_blank"><a href="parceiros.html">Parceiros</a></p></a><h2>
-                    <h2><p class="lead"><a target="_blank"><a href="sobre.html">Sobre</a></p></a><h2>
-                    <h2 id="menuCadastro"><p class="lead"><a target="_blank"><a href="cadastrar.html">Cadastrar</a></p></a><h2>
-                    <hr id="hr" class="small">
-                    <h2><p class="lead"><a target="_blank"><a href="index.html">Voltar</a></p></a><h2>
+                    
+                    <h2 id="menuCadastro"><p class="lead">
+                        <!-- <i class="glyphicon glyphicon-floppy-disk"></i> -->
+                            <a target="_blank"><a href="cadastrar.html">Cadastrar </a>
+                            <a href="cadastrar.html" class="glyphicon glyphicon-floppy-disk"></a>
+                        <!-- <i class="glyphicon glyphicon-floppy-disk"></i> -->
+
+                        <hr class="small">
+
+                    </p></a><h2>
+
+                    <h2><p class="lead">
+                        <!-- <i class="glyphicon glyphicon-scale"></i> -->
+                            <a target="_blank"><a href="pesquisar.html">Postos</a>
+                            <a href="cadastrar.html" class="glyphicon glyphicon-scale"></a>
+                        <!-- <i class="glyphicon glyphicon-scale"></i> -->
+                    </p></a><h2>
+                    
+                    <h2><p class="lead">
+                        <!-- <i class="glyphicon glyphicon-thumbs-up"></i> -->
+                            <a target="_blank"><a href="ranking.html"> Ranking </a>
+                            <a href="cadastrar.html" class="glyphicon glyphicon-thumbs-up"></a>
+                        <!-- <i class="glyphicon glyphicon-thumbs-up"></i> -->
+                    </p></a><h2>
+                    
+                    <h2><p class="lead">
+                        <!-- <i class="glyphicon glyphicon-map-marker"></i> -->
+                            <a target="_blank"><a href="mapa2.html"> Mapa </a>
+                            <a href="cadastrar.html" class="glyphicon glyphicon-map-marker"></a>
+                        <!-- <i class="glyphicon glyphicon-map-marker"></i> -->
+                    </p></a><h2>
+                    
+                    <h2><p class="lead">
+                        <!-- <i class="glyphicon glyphicon-flag"></i> -->
+                            <a target="_blank"><a href="parceiros.html">Parceiros</a>
+                            <a href="cadastrar.html" class="glyphicon glyphicon-flag"></a>
+                        <!-- <i class="glyphicon glyphicon-flag"></i> -->
+                    </p></a><h2>
+                    
+                    <h2><p class="lead">
+                        <!-- <i class="glyphicon glyphicon-education"></i> -->
+                            <a target="_blank"><a href="sobre.html">Sobre</a>
+                            <a href="cadastrar.html" class="glyphicon glyphicon-education"></a>
+                        <!-- <i class="glyphicon glyphicon-education"></i> -->
+                    </p></a><h2>
                 </div>
             </div>
         </div>
@@ -79,11 +115,11 @@
     <script type="text/javascript">
   
     if (window.localStorage.getItem('id_usuario') ) {
-        $('#hr').show();
+        // $('#hr').show();
         $('#menuCadastro').show();
     }else{
         $('#menuCadastro').hide();
-        $('#hr').show();
+        // $('#hr').show();
         
 
     }
