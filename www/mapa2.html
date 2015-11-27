@@ -60,9 +60,6 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Ranking</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="menu.html">Voltar</a>
                     </li>
                 </ul>
@@ -97,8 +94,8 @@
             );
 
         var mapOptions = {
-            center: new google.maps.LatLng(-26.8097025,-49.2821839), //Define o local no mapa quando abrir
-            zoom: 15,
+            center: new google.maps.LatLng(-26.800000,-49.260000), //Define o local no mapa quando abrir
+            zoom: 11,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         } 
         map = new google.maps.Map(document.getElementById("map"),mapOptions);
@@ -110,7 +107,7 @@
         var sorocaba = new google.maps.LatLng();
         marker = new google.maps.Marker({
             position: sorocaba,
-            title: "Casa do Felipe", // Ao passar o mouse no icone mostra uma descrição
+            // title: "Casa do Felipe", // Ao passar o mouse no icone mostra uma descrição
             map: map,
             icon: image //Insere o icone no mapa
         });
