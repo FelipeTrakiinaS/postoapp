@@ -44,6 +44,8 @@
     <!-- Navegação -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
+
+            <!-- Topo da página e modo de navegação entre menus MOBILE-->
             <div class="navbar-header">
                 <a href="menu.html" class="navbar-toggle">
                     <i class="glyphicon glyphicon-chevron-left"></i>
@@ -53,7 +55,7 @@
                 </a>
             </div>
 
-            <!-- Topo da página e modo de navegação entre menus -->
+            <!-- Topo da página e modo de navegação entre menus WEB-->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <li class="hidden">
@@ -100,19 +102,14 @@
         } 
         map = new google.maps.Map(document.getElementById("map"),mapOptions);
 
-
-
-
         // Cria no mapa o icone de localização
         var sorocaba = new google.maps.LatLng();
         marker = new google.maps.Marker({
             position: sorocaba,
-            // title: "Casa do Felipe", // Ao passar o mouse no icone mostra uma descrição
             map: map,
             icon: image //Insere o icone no mapa
         });
         google.maps.event.addListener(marker,"click");
-
 
         $.getJSON("http://app.alexjonas.com.br/postoapp/mapa.php", function( data ) {
 
@@ -129,9 +126,7 @@
                 });
                 google.maps.event.addListener(marker,"click");  
 
-
             });          
-
         });
 
 

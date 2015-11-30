@@ -39,21 +39,35 @@
 </head>
 
 <!-- Topo da página e "scroll" até o topo -->
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"> -->
+<body>
 
     <!-- Navegação -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
+
+            <!-- Topo da página e modo de navegação entre menus MOBILE-->
             <div class="navbar-header">
                 <a href="index.html" class="navbar-toggle">
                     <i class="glyphicon glyphicon-chevron-left"></i>
                 </a>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll">
                     <i class="fa fa-play-circle"></i>  <span class="light">Posto</span> APP
                 </a>
             </div>
-            <!-- Topo da página e modo de navegação entre menus -->
-            <!-- <div class="collapse navbar-collapse navbar-right navbar-main-collapse"></div> -->
+
+            <!-- Topo da página e modo de navegação entre menus WEB-->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html">Voltar</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </nav>
 
@@ -63,71 +77,52 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     
+                    <!-- ++++++++++++++++++++ ITENS DO MENU COM SEUS RESPECTIVOS ICONES ILUSTRATIVOS +++++++++++++++++++++++ -->
                     <h2 id="menuCadastro"><p class="lead">
-                        <!-- <i class="glyphicon glyphicon-floppy-disk"></i> -->
-                            <a target="_blank"><a href="cadastrar.html">Cadastrar </a>
-                            <a href="cadastrar.html" class="glyphicon glyphicon-floppy-disk"></a>
-                        <!-- <i class="glyphicon glyphicon-floppy-disk"></i> -->
-
-                        <hr class="small">
-
+                            <a target="_blank"><a href="cadastrar.html">Cadastrar </a> <!-- NOME -->
+                            <a href="cadastrar.html" class="glyphicon glyphicon-floppy-disk"></a> <!-- ICONE -->
+                        <hr class="small"> <!-- HR = CRIA UMA LINHA LOGO ABAIXO DA OPCAO CADASTRAR -->
                     </p></a><h2>
 
                     <h2><p class="lead">
-                        <!-- <i class="glyphicon glyphicon-scale"></i> -->
-                            <a target="_blank"><a href="pesquisar.html">Postos</a>
-                            <a href="cadastrar.html" class="glyphicon glyphicon-scale"></a>
-                        <!-- <i class="glyphicon glyphicon-scale"></i> -->
+                            <a target="_blank"><a href="pesquisar.html">Postos</a> <!-- NOME -->
+                            <a href="pesquisar.html" class="glyphicon glyphicon-scale"></a> <!-- ICONE -->
                     </p></a><h2>
                     
                     <h2><p class="lead">
-                        <!-- <i class="glyphicon glyphicon-thumbs-up"></i> -->
-                            <a target="_blank"><a href="ranking.html"> Ranking </a>
-                            <a href="cadastrar.html" class="glyphicon glyphicon-thumbs-up"></a>
-                        <!-- <i class="glyphicon glyphicon-thumbs-up"></i> -->
+                            <a target="_blank"><a href="ranking.html"> Ranking </a> <!-- NOME -->
+                            <a href="ranking.html" class="glyphicon glyphicon-thumbs-up"></a> <!-- ICONE -->
                     </p></a><h2>
                     
                     <h2><p class="lead">
-                        <!-- <i class="glyphicon glyphicon-map-marker"></i> -->
-                            <a target="_blank"><a href="mapa2.html"> Mapa </a>
-                            <a href="cadastrar.html" class="glyphicon glyphicon-map-marker"></a>
-                        <!-- <i class="glyphicon glyphicon-map-marker"></i> -->
+                            <a target="_blank"><a href="mapa2.html"> Mapa </a> <!-- NOME -->
+                            <a href="mapa2.html" class="glyphicon glyphicon-map-marker"></a> <!-- ICONE -->
+                    </p></a><h2>
+                    
+                    <h2><p class="lead"> 
+                            <a target="_blank"><a href="parceiros.html">Parceiros</a> <!-- NOME -->
+                            <a href="parceiros.html" class="glyphicon glyphicon-flag"></a> <!-- ICONE -->
                     </p></a><h2>
                     
                     <h2><p class="lead">
-                        <!-- <i class="glyphicon glyphicon-flag"></i> -->
-                            <a target="_blank"><a href="parceiros.html">Parceiros</a>
-                            <a href="cadastrar.html" class="glyphicon glyphicon-flag"></a>
-                        <!-- <i class="glyphicon glyphicon-flag"></i> -->
-                    </p></a><h2>
-                    
-                    <h2><p class="lead">
-                        <!-- <i class="glyphicon glyphicon-education"></i> -->
-                            <a target="_blank"><a href="sobre.html">Sobre</a>
-                            <a href="cadastrar.html" class="glyphicon glyphicon-education"></a>
-                        <!-- <i class="glyphicon glyphicon-education"></i> -->
+                            <a target="_blank"><a href="sobre.html">Sobre</a> <!-- NOME -->
+                            <a href="sobre.html" class="glyphicon glyphicon-education"></a> <!-- ICONE -->
                     </p></a><h2>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- JAVASCRIPT ONDE CASO O USUÁRIO ESTIVER "LOGADO" A OPÇÃO DE CADASTRO APARECERÁ NO MENU -->
     <script type="text/javascript">
-  
-    if (window.localStorage.getItem('id_usuario') ) {
-        // $('#hr').show();
-        $('#menuCadastro').show();
-    }else{
-        $('#menuCadastro').hide();
-        // $('#hr').show();
-        
-
-    }
-
+        if (window.localStorage.getItem('id_usuario') ) { SE ESTIVER BUSCANDO O ""
+            // $('#hr').show();
+            $('#menuCadastro').show();
+        }else{
+            $('#menuCadastro').hide();
+            // $('#hr').show();
+        }
     </script>
-
-
-
 
 </body>
 </html>
