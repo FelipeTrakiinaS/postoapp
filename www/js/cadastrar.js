@@ -32,9 +32,11 @@ function cadastro() {
 		            }), function( data ) {
 		console.log(data);
 
+                // Limpa após cadastrar
 				$('#limpar').click();
 
-
+                // Retorna um ALERT de cadastrado
+                alert("Cadastrado");
 
 
 	});
