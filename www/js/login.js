@@ -29,8 +29,6 @@ function logar () {
 
     console.log(nome);
 
-
-
 	$.post( postTo,({ acao : 'logar',
 		              nome : nome, 
 		             senha : senha
@@ -42,17 +40,15 @@ function logar () {
 
 			var ver =  JSON.parse(data);
 
-
-
+			// Retorna um JSON indicando a variavel = OK
 			if (ver['res'] === 'ok') {
 
+				// Retorna um ALERT de logado
 				alert('logado');
 
 				//salvar no cache
 				//direciona para pagina
-				// window.location.replace("C:/Users/Acer%20Aspire%20V5/Documents/GitHub/postoapp/www/index.html");
 				window.location.replace("menu.html");
-
 
 				window.localStorage.setItem('id_usuario', ver['cod'] ) ;
 				console.log(window.localStorage.getItem('id_usuario'));
@@ -60,11 +56,6 @@ function logar () {
 			}else{
 				console.log('login ou senha errado');
 			}
-
-
-
 		}
 	);
-
-
 }
