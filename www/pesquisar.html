@@ -52,7 +52,7 @@
 </head>
 
 <!-- Topo da página e "scroll" até o topo -->
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="countryCtrl">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  ng-controller="countryCtrl">
 
     <!-- Navegação -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -99,12 +99,10 @@
         </div>
     </section> -->
 
-<!-- <br /><br /><br /><br />
-
-    <p align="center">Consulte todos os postos já cadastrados de sua região!!!</p>
-
+<br /><br /><br /><br />
         <div class="col-lg-12">
-                 <div>
+                 <div >
+
                     <div  ng-repeat="v in valores ">
                          <div class="panel panel-success">
                             <div class="panel-heading" >
@@ -115,31 +113,9 @@
                             </div>
                          </div>                  
                     </div>
-                </div>
-        </div> -->
-
-
-<br /><br /><br /><br /> <!-- BR = Apenas para deixar o texto na linha correta -->
-
-    <p align="center">Consulte todos os postos já cadastrados de sua região!!!</p>
-
-        <!-- ANGULAR JS -->
-        <div class="col-lg-12">
-                 <div >
-                    <div  ng-repeat="v in valores ">
-                         <div class="panel panel-success">
-                            <div class="panel-heading" >
-                                <h1 class="panel-title">{{v.nome_posto}}</h1> <!-- NOME do posto -->
-                            </div>
-                            <div class="panel-body">
-                                <p style="color:black"> {{v.nome_combustivel}} - R$: {{v.valor_valor}}</p> <!-- NOME e VALOR do combustivel -->
-                            </div>
-                         </div>                  
-                    </div>
                     
                 </div>
         </div>
-        
 
 </body>
 </html>
